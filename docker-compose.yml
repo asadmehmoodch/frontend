@@ -1,0 +1,22 @@
+version: '3'
+services:
+  react-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules #Don't map local laptop's node_module folder
+      - .:/app #Map /app in container from laptop.
+  # 2nd container for tests
+  react-web-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    # ports:                Not required since it is not going to run a service. It is just for tests.
+    #   - "3000:3000"
+    volumes:
+      - /app/node_modules #Don't map local laptop's node_module folder
+      - .:/app #Map /app in container from laptop.
+    command: ["npm", "run", "test"]
