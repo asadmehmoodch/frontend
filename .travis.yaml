@@ -1,5 +1,5 @@
 sudo: required
-#
+# above sudo is required for the following tasks
 services:
   - docker
 
