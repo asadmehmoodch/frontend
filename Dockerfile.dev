@@ -1,4 +1,5 @@
 FROM node:alpine
+# The WORKDIR is working directoring inside the container.
 WORKDIR '/app'
 COPY ./package.json .
 RUN npm install
