@@ -1,0 +1,18 @@
+This is a readme section
+
+To run/build/test this project you need the following
+
+1) node
+You can verify if you have node install by running node -v on terminal.
+
+If it is not installed then it will print nothing.
+
+You can then install node from https://nodejs.org
+
+2) Go to your project directory and install tool to generate react project.
+
+npm install -g create-react-app
+
+3) Generate a tiny react project.
+
+create-react-app frontend
